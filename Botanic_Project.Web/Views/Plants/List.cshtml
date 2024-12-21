@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Botanic_Project.Web.Models.Entities.Plant>
+
+<h1>Plants</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Plant Name</th>
+            <th>Family of the Plant</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var plant in Model)
+        {
+            <tr>
+                <td>@plant.Id</td>
+                <td>@plant.Name</td>
+                <td>@plant.Family</td>
+                <td>
+                    <a class="btn btn-primary" asp-controller="Plants" asp-action="Edit" asp-route-id="@plant.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
