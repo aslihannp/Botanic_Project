@@ -1,12 +1,14 @@
 ﻿using Botanic_Project.Web.Data;
 using Botanic_Project.Web.Models;
 using Botanic_Project.Web.Models.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 
 namespace Botanic_Project.Web.Controllers
 {
+    [Authorize] //kullanici giris yapmamis ise, otomatik olarak, Program.cs‘de belirtmiş olduğumuz, /Login/ sayfamıza yönlenecek
     public class PlantsController : Controller
     {
         private readonly ApplicationDbContext dbContext;

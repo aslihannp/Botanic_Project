@@ -10,6 +10,7 @@ namespace Botanic_Project.Web.Data
 
         }
         public DbSet<Plant> Plant { get; set; }
-          
+        public DbSet<User> User { get; set; }
+
     }
 }

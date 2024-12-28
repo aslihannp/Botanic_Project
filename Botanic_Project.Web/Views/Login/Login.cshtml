@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Botanic_Project.Web.Models.LoginViewModel
+<h2>Login</h2>
+@{
+    <div asp-validation-summary="All" class="test-danger"></div>
+}
+<form asp-action="Login" method="post">
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control"/>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="checkbox" class="form-check-input" id="RememberMe" asp-for="RememberMe" />
+        <label class="form-check-label" for="RememberMe">Remember Me:</label>
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Login</button>
+    </div>
+    @if (!ViewData.ModelState.IsValid)
+    {//buradan emin deilim?
+        <div class="text-danger">
+            Invalid login attempt.
+        </div>
+
+    }
+
+    <div>
+        <a class="btn btn-primary" asp-controller="Login" asp-action="Register">Register</a>
+    </div>
+    
+</form>
