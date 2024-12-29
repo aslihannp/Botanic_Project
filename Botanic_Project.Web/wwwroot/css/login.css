@@ -1,0 +1,25 @@
+body {
+    background-color: #f7f9fc;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #5EA669;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+}
+
+.btn-success {
+    background-color: #5EA669;
+    border-color: #5EA669;
+}
+
+.btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+}
+
